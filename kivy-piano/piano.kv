@@ -1,0 +1,327 @@
+
+<Piano>:
+    # เชื่อมโยง ObjectProperty กับปุ่มตาม id (เหมือนเดิม)
+    button_z: button1
+    button_x: button2
+    button_c: button3
+    button_v: button4
+    button_b: button5
+    button_n: button6
+    button_m: button7
+    button_a: button8
+    button_s: button9
+    button_d: button10
+    button_f: button11
+    button_g: button12
+    button_h: button13
+    button_j: button14
+    button_q: button15
+    button_w: button16
+    button_e: button17
+    button_r: button18
+    button_t: button19
+    button_y: button20
+    button_u: button21
+    button_1: button22
+    button_2: button23
+    button_3: button24
+    button_4: button25
+    button_5: button26
+    button_6: button27
+    button_7: button28
+    button_shift_z: button29
+    button_shift_x: button30
+    button_shift_v: button31
+    button_shift_b: button32
+    button_shift_n: button33
+    button_shift_a: button34
+    button_shift_s: button35
+    button_shift_f: button36
+    button_shift_g: button37
+    button_shift_h: button38
+    button_shift_q: button39
+    button_shift_w: button40
+    button_shift_r: button41
+    button_shift_t: button42
+    button_shift_y: button43
+    button_shift_1: button44
+    button_shift_2: button45
+    button_shift_4: button46
+    button_shift_5: button47
+    button_shift_6: button48
+    orientation: 'vertical'
+
+    # ปุ่มอยู่ด้านบน
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: 0.1
+        spacing: 10
+        padding: 10
+
+        Button:
+            text: "Start Recording"
+            size_hint_x: None
+            width: 200
+            on_press: root.toggle_recording(self)
+
+        Button:
+            text: "Open Video Folder"
+            size_hint_x: None
+            width: 200
+            on_press: root.open_video_folder(self)
+
+        Button:
+            text: "Open Notes Folder"
+            size_hint_x: None
+            width: 200
+            on_press: root.open_notes_folder(self)
+
+    BoxLayout:
+        orientation: 'vertical'
+
+        # Label "Piano" ครอบคลุม 50% ของความสูง
+        Label:
+            text: "Piano"
+            size_hint_y: 0.5
+
+        # เปียโนครอบคลุมอีก 50% ของความสูง
+        RelativeLayout:
+            size_hint: 1, 0.5
+
+            # --- คีย์สีขาว (White Keys) 28 ปุ่ม ---
+            BoxLayout:
+                id: white_keys
+                orientation: 'horizontal'
+                size_hint: 1, 1
+                spacing: 1
+
+                Button:
+                    id: button1
+                    text: ""
+                Button:
+                    id: button2
+                    text: ""
+                Button:
+                    id: button3
+                    text: ""
+                Button:
+                    id: button4
+                    text: ""
+                Button:
+                    id: button5
+                    text: ""
+                Button:
+                    id: button6
+                    text: ""
+                Button:
+                    id: button7
+                    text: ""
+                Button:
+                    id: button8
+                    text: ""
+                Button:
+                    id: button9
+                    text: ""
+                Button:
+                    id: button10
+                    text: ""
+                Button:
+                    id: button11
+                    text: ""
+                Button:
+                    id: button12
+                    text: ""
+                Button:
+                    id: button13
+                    text: ""
+                Button:
+                    id: button14
+                    text: ""
+                Button:
+                    id: button15
+                    text: ""
+                Button:
+                    id: button16
+                    text: ""
+                Button:
+                    id: button17
+                    text: ""
+                Button:
+                    id: button18
+                    text: ""
+                Button:
+                    id: button19
+                    text: ""
+                Button:
+                    id: button20
+                    text: ""
+                Button:
+                    id: button21
+                    text: ""
+                Button:
+                    id: button22
+                    text: ""
+                Button:
+                    id: button23
+                    text: ""
+                Button:
+                    id: button24
+                    text: ""
+                Button:
+                    id: button25
+                    text: ""
+                Button:
+                    id: button26
+                    text: ""
+                Button:
+                    id: button27
+                    text: ""
+                Button:
+                    id: button28
+                    text: ""
+
+            # --- คีย์สีดำ (Black Keys) 20 ปุ่ม ---
+            FloatLayout:
+                id: black_keys
+                size_hint: 1, 1
+
+                Button:
+                    id: button29
+                    text: ""
+                    background_normal: ''
+                    background_color: 0, 0, 0, 1
+                    size_hint: 0.03, 0.6
+                    pos_hint: {"x": 0.0232, "y": 0.4}
+                Button:
+                    id: button30
+                    text: ""
+                    background_normal: ''
+                    background_color: 0, 0, 0, 1
+                    size_hint: 0.03, 0.6
+                    pos_hint: {"x": 0.0589, "y": 0.4}
+                Button:
+                    id: button31
+                    text: ""
+                    background_normal: ''
+                    background_color: 0, 0, 0, 1
+                    size_hint: 0.03, 0.6
+                    pos_hint: {"x": 0.1304, "y": 0.4}
+                Button:
+                    id: button32
+                    text: ""
+                    background_normal: ''
+                    background_color: 0, 0, 0, 1
+                    size_hint: 0.03, 0.6
+                    pos_hint: {"x": 0.1661, "y": 0.4}
+                Button:
+                    id: button33
+                    text: ""
+                    background_normal: ''
+                    background_color: 0, 0, 0, 1
+                    size_hint: 0.03, 0.6
+                    pos_hint: {"x": 0.2018, "y": 0.4}
+                Button:
+                    id: button34
+                    text: ""
+                    background_normal: ''
+                    background_color: 0, 0, 0, 1
+                    size_hint: 0.03, 0.6
+                    pos_hint: {"x": 0.2732, "y": 0.4}
+                Button:
+                    id: button35
+                    text: ""
+                    background_normal: ''
+                    background_color: 0, 0, 0, 1
+                    size_hint: 0.03, 0.6
+                    pos_hint: {"x": 0.3089, "y": 0.4}
+                Button:
+                    id: button36
+                    text: ""
+                    background_normal: ''
+                    background_color: 0, 0, 0, 1
+                    size_hint: 0.03, 0.6
+                    pos_hint: {"x": 0.3804, "y": 0.4}
+                Button:
+                    id: button37
+                    text: ""
+                    background_normal: ''
+                    background_color: 0, 0, 0, 1
+                    size_hint: 0.03, 0.6
+                    pos_hint: {"x": 0.4161, "y": 0.4}
+                Button:
+                    id: button38
+                    text: ""
+                    background_normal: ''
+                    background_color: 0, 0, 0, 1
+                    size_hint: 0.03, 0.6
+                    pos_hint: {"x": 0.4518, "y": 0.4}
+                Button:
+                    id: button39
+                    text: ""
+                    background_normal: ''
+                    background_color: 0, 0, 0, 1
+                    size_hint: 0.03, 0.6
+                    pos_hint: {"x": 0.5232, "y": 0.4}
+                Button:
+                    id: button40
+                    text: ""
+                    background_normal: ''
+                    background_color: 0, 0, 0, 1
+                    size_hint: 0.03, 0.6
+                    pos_hint: {"x": 0.5589, "y": 0.4}
+                Button:
+                    id: button41
+                    text: ""
+                    background_normal: ''
+                    background_color: 0, 0, 0, 1
+                    size_hint: 0.03, 0.6
+                    pos_hint: {"x": 0.6304, "y": 0.4}
+                Button:
+                    id: button42
+                    text: ""
+                    background_normal: ''
+                    background_color: 0, 0, 0, 1
+                    size_hint: 0.03, 0.6
+                    pos_hint: {"x": 0.6661, "y": 0.4}
+                Button:
+                    id: button43
+                    text: ""
+                    background_normal: ''
+                    background_color: 0, 0, 0, 1
+                    size_hint: 0.03, 0.6
+                    pos_hint: {"x": 0.7018, "y": 0.4}
+                Button:
+                    id: button44
+                    text: ""
+                    background_normal: ''
+                    background_color: 0, 0, 0, 1
+                    size_hint: 0.03, 0.6
+                    pos_hint: {"x": 0.7732, "y": 0.4}
+                Button:
+                    id: button45
+                    text: ""
+                    background_normal: ''
+                    background_color: 0, 0, 0, 1
+                    size_hint: 0.03, 0.6
+                    pos_hint: {"x": 0.8089, "y": 0.4}
+                Button:
+                    id: button46
+                    text: ""
+                    background_normal: ''
+                    background_color: 0, 0, 0, 1
+                    size_hint: 0.03, 0.6
+                    pos_hint: {"x": 0.8804, "y": 0.4}
+                Button:
+                    id: button47
+                    text: ""
+                    background_normal: ''
+                    background_color: 0, 0, 0, 1
+                    size_hint: 0.03, 0.6
+                    pos_hint: {"x": 0.9161, "y": 0.4}
+                Button:
+                    id: button48
+                    text: ""
+                    background_normal: ''
+                    background_color: 0, 0, 0, 1
+                    size_hint: 0.03, 0.6
+                    pos_hint: {"x": 0.9518, "y": 0.4}
